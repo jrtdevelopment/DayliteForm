@@ -24,7 +24,5 @@ print email
 payload = {'first_name':firstName}
 
 payload = json.dumps(payload)
-
-pprint payload
 #r = requests.post('https://api.marketcircle.net/v1/contacts', headers={'Authorization': apiKey}, json=payload)
 #print r.status_code
