@@ -13,10 +13,10 @@ print "Hook['params'] is populated with the following request parameters"
 pprint.pprint(Hook['params'])
 firstName = Hook['params']['firstname']
 lastName = Hook['params']['lastname']
+email = Hook['params']['email']
 print firstName
 print lastName
-payload = {'first_name' : firstName, 'last_name' : lastName}
-print payload
+print email
 r = requests.get('https://api.marketcircle.net/v1/contacts', headers={'Authorization': apiKey}, verify=False)
 print r.encoding
 print r.content
