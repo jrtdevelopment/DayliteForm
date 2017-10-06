@@ -1,9 +1,8 @@
 import pprint #Imports for pretty print
 import requests #Imports for http requests to handle the API
 import json #Imports the JSON handler
-from functions import printHello
-printHello()
-apiKey = 'Bearer VNAl8xf8bFiPTSECiA8K17QPN1FT4r' #Put the API key here, saves you having to copy and past it into your code
+
+apiKey = 'Bearer nR377HuRfL8WM33yQZsJ76t7RpUKkj' #Put the API key here, saves you having to copy and past it into your code
 
 r = requests.get('https://api.marketcircle.net/v1', headers={'Authorization': apiKey}, verify=False) #Gives the r variable the value of requests get
 
@@ -24,4 +23,3 @@ print r.encoding
 print r.content
 #r = requests.post('https://api.marketcircle.net/v1/contacts', headers={'Authorization': apiKey}, json=payload)
 #print r.status_code
-printHello()
