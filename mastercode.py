@@ -21,7 +21,7 @@ print email
 #r = requests.get('https://api.marketcircle.net/v1/contacts', headers={'Authorization': apiKey}, verify=False)
 #print r.encoding
 #print r.content
-payload = {'first_name':firstName}
+payload = {'first_name':firstName, 'last_name':lastName}
 
 payload = json.dumps(payload)
 r = requests.post('https://api.marketcircle.net/v1/contacts', headers={'Authorization': apiKey}, data=payload, verify=False)
