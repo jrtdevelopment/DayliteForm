@@ -18,8 +18,13 @@ email = Hook['params']['email']
 print firstName
 print lastName
 print email
-r = requests.get('https://api.marketcircle.net/v1/contacts', headers={'Authorization': apiKey}, verify=False)
-print r.encoding
-print r.content
+#r = requests.get('https://api.marketcircle.net/v1/contacts', headers={'Authorization': apiKey}, verify=False)
+#print r.encoding
+#print r.content
+payload = {'first_name':firstName}
+
+payload = json.dumps(payload)
+
+pprint payload
 #r = requests.post('https://api.marketcircle.net/v1/contacts', headers={'Authorization': apiKey}, json=payload)
 #print r.status_code
