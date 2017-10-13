@@ -9,20 +9,17 @@ r = requests.get('https://api.marketcircle.net/v1', headers={'Authorization': ap
 print r.status_code #Print the value of the status code of r
 print r.headers['content-type'] #print the value of the headers of the request
   
-print "Welcome to the Daylite API test service"
-print "Hook['params'] is populated with the following request parameters"
-pprint.pprint(Hook['params'])
+print "GetUserDetails"
+print "This script will take the First name and surname from a form and list all users with those details"
+
+print "This line shows what values have been passed from the form to the service."
 firstName = Hook['params']['firstname']
 lastName = Hook['params']['lastname']
 email = Hook['params']['email']
 print firstName
 print lastName
 print email
-#r = requests.get('https://api.marketcircle.net/v1/contacts', headers={'Authorization': apiKey}, verify=False)
-#print r.encoding
-#print r.content
-payload = {'first_name':firstName, 'last_name':lastName}
-
-payload = json.dumps(payload)
-r = requests.post('https://api.marketcircle.net/v1/contacts', headers={'Authorization': apiKey}, data=payload, verify=False)
-print r.status_code
+# This line gets all the contacts.
+r = requests.get('https://api.marketcircle.net/v1/contacts', headers={'Authorization': apiKey}, verify=False)
+print r.encoding
+print r.content
