@@ -23,3 +23,5 @@ print email
 r = requests.get('https://api.marketcircle.net/v1/contacts', headers={'Authorization': apiKey}, verify=False)
 print r.encoding
 print r.content
+for item in r:
+	print "This is an object"(item)
