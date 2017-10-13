@@ -9,7 +9,7 @@ r = requests.get('https://api.marketcircle.net/v1', headers={'Authorization': ap
 print r.status_code #Print the value of the status code of r
 print r.headers['content-type'] #print the value of the headers of the request
   
-print "Welcome to the Daylite API test service"
+print "Welcome to MasterCode"
 print "Hook['params'] is populated with the following request parameters"
 pprint.pprint(Hook['params'])
 firstName = Hook['params']['firstname']
