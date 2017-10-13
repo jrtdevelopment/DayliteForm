@@ -2,7 +2,7 @@ import pprint #Imports for pretty print
 import requests #Imports for http requests to handle the API
 import json #Imports the JSON handler
 
-apiKey = 'Bearer nR377HuRfL8WM33yQZsJ76t7RpUKkj' #Put the API key here, saves you having to copy and past it into your code
+apiKey = 'Bearer wzcLUNTUhEn8hmHedkFkuh8Wz35V09' #Put the API key here, saves you having to copy and past it into your code
 
 r = requests.get('https://api.marketcircle.net/v1', headers={'Authorization': apiKey}, verify=False) #Gives the r variable the value of requests get
 
